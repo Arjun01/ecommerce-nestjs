@@ -5,20 +5,11 @@
   "compilerOptions": {
     "deleteOutDir": true,
     "webpack": true,
-    "tsConfigPath": "apps/ecommerce-nestjs/tsconfig.app.json"
+    "tsConfigPath": "apps/orders/tsconfig.app.json"
   },
   "monorepo": true,
-  "root": "apps/ecommerce-nestjs",
+  "root": "apps/orders",
   "projects": {
-    "ecommerce-nestjs": {
-      "type": "application",
-      "root": "apps/ecommerce-nestjs",
-      "entryFile": "main",
-      "sourceRoot": "apps/ecommerce-nestjs/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/ecommerce-nestjs/tsconfig.app.json"
-      }
-    },
     "orders": {
       "type": "application",
       "root": "apps/orders",
@@ -26,6 +17,33 @@
       "sourceRoot": "apps/orders/src",
       "compilerOptions": {
         "tsConfigPath": "apps/orders/tsconfig.app.json"
+      }
+    },
+    "auth": {
+      "type": "application",
+      "root": "apps/auth",
+      "entryFile": "main",
+      "sourceRoot": "apps/auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/auth/tsconfig.app.json"
+      }
+    },
+    "products": {
+      "type": "application",
+      "root": "apps/products",
+      "entryFile": "main",
+      "sourceRoot": "apps/products/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/products/tsconfig.app.json"
+      }
+    },
+    "cart": {
+      "type": "application",
+      "root": "apps/cart",
+      "entryFile": "main",
+      "sourceRoot": "apps/cart/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/cart/tsconfig.app.json"
       }
     }
   }
