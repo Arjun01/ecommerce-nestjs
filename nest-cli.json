@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/ecommerce-nestjs/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/ecommerce-nestjs/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/ecommerce-nestjs",
+  "projects": {
+    "ecommerce-nestjs": {
+      "type": "application",
+      "root": "apps/ecommerce-nestjs",
+      "entryFile": "main",
+      "sourceRoot": "apps/ecommerce-nestjs/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/ecommerce-nestjs/tsconfig.app.json"
+      }
+    },
+    "orders": {
+      "type": "application",
+      "root": "apps/orders",
+      "entryFile": "main",
+      "sourceRoot": "apps/orders/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/orders/tsconfig.app.json"
+      }
+    }
+  }
+}
